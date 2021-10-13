@@ -249,10 +249,6 @@ public class ConsoleView implements View {
     @Override
     public void commentPhoto() {
         scanner = new Scanner(System.in);
-        System.out.println("Введите имя, фамилию пользователя");
-        String name = scanner.nextLine();
-        String surname = scanner.nextLine();
-
         try {
             Profile profile = findProfile();
             System.out.println("Фотографии пользователя:");
