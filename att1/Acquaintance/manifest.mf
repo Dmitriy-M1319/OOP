@@ -1,0 +1,2 @@
+main-class: main.java.edu.csf.oop.java.acquaintance.Main
+class-path: bin/ lib/logback-core-1.2.6.jar lib/logback-classic-1.2.6.jar lib/slf4j-api-1.7.32.jar

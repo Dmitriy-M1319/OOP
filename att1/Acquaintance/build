@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Компиляция исходников
+# -sourcepath - указывает на зависимые модули в других пакетах
+# -classpath - Необходимо прописать пути к используемым библиотекам
+# -d ./bin - указывает на папку, где будут лежать скомпилированные классы
+
+javac -sourcepath ./src -classpath ./lib/logback-core-1.2.6.jar:./lib/logback-classic-1.2.6.jar:./lib/slf4j-api-1.7.32.jar -d bin ./src/main/java/edu/csf/oop/java/acquaintance/Main.java
+
+# Создание jar архива
+# --create - создание архива
+# --file - название архива
+# --manifest - файл манифеста, в котором есть описание main класса и путей к скомпилированным выше файлам и либам
+# -C - где лежат скомпилированные файлы
+# . - путь, где создаем jar
+
+# Запускается командой java -jar путь к архиву
+
+jar --create --file myvk.jar --manifest manifest.mf -C ./bin/ .
